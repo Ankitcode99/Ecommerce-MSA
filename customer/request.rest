@@ -1,0 +1,26 @@
+GET http://localhost:8080/customrt/app-events
+Content-Type: application/json
+
+{
+    "payload":{
+        "event":"TEST",
+        "data":{
+            "test":"test"
+        }
+    }
+}
+
+########
+
+POST http://localhost:8080/customer/login
+Content-Type: application/json
+
+{
+    "email":"fake1@example.com",
+    "password":"12345"
+}
+
+########
+
+GET http://localhost:8080/customer/wishlist
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZha2UxQGV4YW1wbGUuY29tIiwiX2lkIjoiNjRkZmI0OTQzZTdlYjliYzA5NjhmMzIwIiwiaWF0IjoxNjkyNDQ3MTIyLCJleHAiOjE2OTUwMzkxMjJ9.gIfYEd1_8BTRsvxI3U3kJeWzC4x8yfHqTNAXA6ilNUw

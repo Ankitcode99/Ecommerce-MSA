@@ -1,0 +1,48 @@
+GET http://localhost:8080/
+
+##########
+
+POST http://localhost:8080/product/create
+Content-Type: application/json
+
+{
+    "name":"Amul butter",
+    "desc":"Can be used for cooking & making toast",
+    "type":"butters",
+    "banner":"<BANNER_URL>",
+    "unit": 1,
+    "price":400,
+    "available":true,
+    "supplier":"Amul"
+}
+
+###########
+
+GET http://localhost:8080/category/butters
+
+###########
+
+PUT http://localhost:8080/wishlist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZha2UxQGV4YW1wbGUuY29tIiwiX2lkIjoiNjRkZmI0OTQzZTdlYjliYzA5NjhmMzIwIiwiaWF0IjoxNjkyNDQ3MTIyLCJleHAiOjE2OTUwMzkxMjJ9.gIfYEd1_8BTRsvxI3U3kJeWzC4x8yfHqTNAXA6ilNUw
+
+{
+    "_id":"64e087f427286ee9a4e369af"
+}
+
+###########
+
+PUT http://localhost:8080/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZha2UxQGV4YW1wbGUuY29tIiwiX2lkIjoiNjRkZmI0OTQzZTdlYjliYzA5NjhmMzIwIiwiaWF0IjoxNjkyNDQ3MTIyLCJleHAiOjE2OTUwMzkxMjJ9.gIfYEd1_8BTRsvxI3U3kJeWzC4x8yfHqTNAXA6ilNUw
+
+{
+    "_id":"64e087f427286ee9a4e369af",
+    "qty":1
+}
+
+###########
+
+DELETE http://localhost:8080/cart/64e087f427286ee9a4e369af
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZha2UxQGV4YW1wbGUuY29tIiwiX2lkIjoiNjRkZmI0OTQzZTdlYjliYzA5NjhmMzIwIiwiaWF0IjoxNjkyNDQ3MTIyLCJleHAiOjE2OTUwMzkxMjJ9.gIfYEd1_8BTRsvxI3U3kJeWzC4x8yfHqTNAXA6ilNUw
+
